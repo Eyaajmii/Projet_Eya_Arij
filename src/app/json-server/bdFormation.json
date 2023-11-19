@@ -1,0 +1,46 @@
+{
+  "formation": [
+    {
+      "id": 1,
+      "nom": "Cybersecurity Bootcamp",
+      "photo": "assets/cyber.jpg",
+      "contenu": [
+        {
+          "c1": "Attaques, menaces et risques",
+          "c2": "Architecture et design",
+          "c3": "Mise en œuvre de stratégies de sécurité",
+          "c4": "Les opérations et la gestion des incidents",
+          "c5": "Gouvernance, risque et conformité",
+          "c6": "CompTIA Security+ : Préparation à l'examen"
+        }
+      ],
+      "datefinInscri": "2023-12-31",
+      "dateCommence": "2024-02-01",
+      "duree": "20 semaines",  
+      "horraire": "4 heures/semaine",
+      "lieu": "En ligne",
+      "paye": true  
+    },
+    {
+      "id": 2,
+      "nom": "Soft skills",
+      "photo": "assets/soft.png",
+      "contenu": [
+        {
+          "c1": "Développer sa communication interpersonnelle",
+          "c2": "Comprendre le stress et son rapport avec le stress",
+          "c3": "Comprendre son rapport aux conflits",
+          "c4": "Prendre la parole et développer sa communication non verbale",
+          "c5": "Savoir négocier",
+          "c6": "Prendre le rôle en public"
+        }
+      ],
+      "datefinInscri": "2023-12-31",
+      "dateCommence": "2024-01-25",
+      "duree": "7 semaines", 
+      "horraire": "2 heures/semaine",
+      "lieu": "Présentielle",
+      "paye": false  
+    }
+  ]
+}
