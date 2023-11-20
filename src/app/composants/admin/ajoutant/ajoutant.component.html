@@ -1,0 +1,53 @@
+<div class="container">
+    <h1>Add NEW training</h1>
+    <form [formGroup]="FormationForum" (ngSubmit)="onSubmitForm()">
+        <div>
+            <label> Identifiant du produit </label>
+            <input type="number" name="id" formControlName="id" >
+        </div>
+        <div>
+            <label>Nom de la formation </label>
+            <input type="text" name="nom" formControlName="nom">
+        </div>
+        <div>
+            <label>Photo de la formation </label>
+            <input type="text" name="photo" formControlName="photo" placeholder="assets/....">
+        </div>
+        <h5>Contenu</h5>
+        <div formArrayName="Contenu">
+            <div *ngFor="let c of lescontenus.controls ; let i=index">
+                <div *ngIf="i<5">
+                Contenu {{i+1}}
+                <input type="text" [formControlName]="i">
+                </div>
+            </div>
+        </div>
+        <button type="button" (click)="ajoutcontenu()" class="btn btn-secondary">Ajouter Contenu</button><br>
+        <div>
+            <label for="datefinInscri">Date fin inscription:</label>
+            <input type="text" id="datefinInscri" formControlName="datefinInscri">
+        </div>
+        <div>
+            <label for="dateCommence">dateCommence : </label>
+            <input type="text" id="dateCommence" formControlName="dateCommence">
+        </div>
+        <div>
+            <label>duree </label>
+            <input type="text" name="duree" formControlName="duree">
+        </div>
+        <div>
+            <label>Horraire :  </label>
+            <input type="text" name="horraire" formControlName="horraire">
+        </div>
+        <div>
+            <label>lieu  :  </label>
+            <input type="text" name="lieu" formControlName="lieu">
+        </div>
+        <div>
+            <label for="paye">Payé:</label>
+            <input type="checkbox" id="paye" formControlName="paye">
+        </div>
+        <input type="submit" value="Ajouter"class="btn btn-success" >
+        <input type="button" value="Effacer" (click)="onresetForm()" class="btn btn-warning">
+    </form>
+</div>

@@ -15,5 +15,8 @@ export class FormationService {
   getFormationById(id: number): Observable<Formation> {
     return this.http.get<Formation>(`${url}/${id}`);
   }
+  addFormation(f:Formation):Observable<Formation>{
+    return this.http.post<Formation>(url,f);
+  }
 }
 

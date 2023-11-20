@@ -1,0 +1,12 @@
+<ul class="list-group">
+    <li *ngFor="let f of  lesFormations" class="list-group-item">
+      <img width="100px" [src]="f.photo" alt="{{ f.nom }} Image" />
+      <span>Id: {{ f.id }}</span>
+      <span>{{ f.nom | uppercase }}</span>
+      <div class="d-flex justify-content-between">
+        <span>
+          <button [routerLink]="['/formation', f.id]" class="btn btn-info">Infos</button>
+        </span>
+      </div>
+    </li>
+  </ul>

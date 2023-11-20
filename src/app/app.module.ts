@@ -16,6 +16,11 @@ import { MenupublicComponent } from './composants/public/menupublic/menupublic.c
 import { SelectedformationComponent } from './composants/public/selectedformation/selectedformation.component';
 import { FonctionnalitesComponent } from './composants/admin/fonctionnalites/fonctionnalites.component';
 import { InformationComponent } from './composants/admin/information/information.component';
+import { ConsultantComponent } from './composants/admin/consultant/consultant.component';
+import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.component';
+import { ModificationComponent } from './composants/admin/modification/modification.component';
+import { SuppressionComponent } from './composants/admin/suppression/suppression.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -34,11 +39,16 @@ import { InformationComponent } from './composants/admin/information/information
     MenupublicComponent,
     SelectedformationComponent,
     InformationComponent,
+    ConsultantComponent,
+    AjoutantComponent,
+    ModificationComponent,
+    SuppressionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [],

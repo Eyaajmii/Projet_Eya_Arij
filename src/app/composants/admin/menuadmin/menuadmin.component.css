@@ -1,0 +1,41 @@
+img {
+    width: 100px;
+  }
+  
+  .bg-custom {
+    background-color: rgba(36, 108, 167, 0.991);
+  }
+  .navbar{
+    padding:10px;
+    height: 90px;
+  }
+  
+  .navbar a {
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  /*.navbar a:focus {
+    color: red;
+    font-weight:bolder;
+  }*/
+  .navbar a:hover {
+    background-color: gold;
+  }
+  .wow{
+    width:400px;
+    float: right;
+    margin-right: 300px;
+    padding-top: 40px;
+  }
+  .txt{
+    color: black;
+    font-size:320%;
+    font-weight: 1000;
+    font-family:Helvetica,Arial,sans-serif;
+    padding-top: 200px;
+    padding-left: 300px;
+  }
+  .c1{
+    color:crimson;
+  }
