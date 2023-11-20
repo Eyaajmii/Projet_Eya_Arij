@@ -19,7 +19,6 @@ import { InformationComponent } from './composants/admin/information/information
 import { ConsultantComponent } from './composants/admin/consultant/consultant.component';
 import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.component';
 import { ModificationComponent } from './composants/admin/modification/modification.component';
-import { SuppressionComponent } from './composants/admin/suppression/suppression.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -42,7 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ConsultantComponent,
     AjoutantComponent,
     ModificationComponent,
-    SuppressionComponent,
+    
   ],
   imports: [
     BrowserModule,

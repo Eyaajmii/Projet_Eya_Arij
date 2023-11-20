@@ -7,6 +7,12 @@
         <span>
           <button [routerLink]="['/formation', f.id]" class="btn btn-info">Infos</button>
         </span>
+        <span>
+          <button> Modifier</button>
+        </span>
+        <span>
+          <button  (click)="Supprimer(f.id)">Supprimer</button>
+        </span>
       </div>
     </li>
   </ul>

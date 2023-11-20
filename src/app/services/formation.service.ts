@@ -18,5 +18,12 @@ export class FormationService {
   addFormation(f:Formation):Observable<Formation>{
     return this.http.post<Formation>(url,f);
   }
+  updateFormationbyId(id:number, f:Formation):Observable<Formation>{
+    return this.http.put<Formation>(url+"/"+ id, f);
+    }
+    deleteProduit(id:number){
+      return this.http.delete(url+"/"+ id);
+      }
+      
 }
 

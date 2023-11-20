@@ -15,7 +15,7 @@ import { CertaficatComponent } from './composants/public/certaficat/certaficat.c
 import { ConsultantComponent } from './composants/admin/consultant/consultant.component';
 import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.component';
 import { ModificationComponent } from './composants/admin/modification/modification.component';
-import { SuppressionComponent } from './composants/admin/suppression/suppression.component';
+
 
 const routes: Routes = [
   //publicdash
@@ -40,13 +40,17 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'information', pathMatch: 'full' },
       { path: 'information', title: 'information', component: InformationComponent },
-      { path: 'fonction', title: 'fonction', component:FonctionnalitesComponent },
-    ]
-  },
-  {path:'consulter',title:'consulter',component:ConsultantComponent},
-      {path:'ajouter',title:'ajouter',component:AjoutantComponent},
-      {path:'modifier',title:'modifier',component:ModificationComponent},
-      {path:'supprimer',title:'supprimer',component:SuppressionComponent},
+      {
+        path: 'fonction',
+        title: 'fonction',
+        component: FonctionnalitesComponent,
+        children: [
+          { path: 'consulter', title: 'consulter', component: ConsultantComponent },
+          { path: 'ajouter', title: 'ajouter', component: AjoutantComponent },
+          { path: 'modifier', title: 'modifier', component: ModificationComponent },
+        ]
+      },
+    ]},
       //erreur
   { path: '**', title: 'Error 404', component: ErreurComponent },
 ];

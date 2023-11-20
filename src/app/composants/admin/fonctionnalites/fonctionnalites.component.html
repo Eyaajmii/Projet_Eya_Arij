@@ -1,5 +1,12 @@
-<h1>Mes Fonctionnalités</h1>
-<ul>
-    <li (click)="consulter()">Consulter les formations</li>
-    <li (click)="ajouter()">Ajouter une formation</li>
-</ul>
+<div class="container">
+  <h1>Mes Fonctionnalités</h1>
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/adminstrateur/fonction/consulter">Consulter les formations</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/adminstrateur/fonction/ajouter">Ajouter une formation</a>
+    </li>
+  </ul>
+</div>
+<router-outlet></router-outlet>

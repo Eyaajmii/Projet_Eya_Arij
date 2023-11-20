@@ -17,4 +17,9 @@ export class ConsultantComponent implements OnInit{
       data => this.lesFormations = data
     );
   }
+ Supprimer(id:number){
+    this.formationService.deleteProduit(id)
+    .subscribe();
+    }
+    
 }
