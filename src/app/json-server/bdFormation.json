@@ -41,6 +41,48 @@
       "horraire": "2 heures/semaine",
       "lieu": "Présentielle",
       "paye": false  
+    },
+    {
+      "id": 3,
+      "nom": "Python Bootcamp",
+      "photo": "assets/python.jpg",
+      "contenu": [
+        {
+          "c1": "Syntaxe de base et typage dynamique",
+          "c2": "Contrôle de flux (instructions conditionnelles et boucles)",
+          "c3": "Fonctions et programmation orientée objet",
+          "c4": " Structures de données (listes, tuples, ensembles, dictionnaires)",
+          "c5": " Gestion des exceptions et modules/packages",
+          "c6": " Utilisation des bibliothèques standard et tierces, et travaux pratiques"
+        }
+      ],
+      "datefinInscri": "2023-12-31",
+      "dateCommence": "2024-02-10",
+      "duree": "5 semaines",  
+      "horaire": "8 heures/semaine",
+      "lieu": "En ligne",
+      "paye": true  
+    },
+    {
+      "id": 4,
+      "nom": "Angular Bootstrap Fontawsome Bootcamp ",
+      "photo": "assets/angular.jpg",
+      "contenu": [
+        {
+          "c1": "Comprendre les bases d’Angular (composants, modules, services, etc.)",
+          "c2": "Architecture d’une application Angular (organisation du code, modularité, etc.)",
+          "c3": " Utilisation de Bootstrap avec Angular pour la mise en page et le design",
+          "c4": " Gestion des événements et des formulaires en Angular",
+          "c5": "Utilisation de FontAwesome avec Angular pour ajouter des icônes",
+          "c6": " Création d’une application web complète en utilisant Angular, Bootstrap et FontAwesome"
+        }
+      ],
+      "datefinInscri": "2023-12-31",
+      "dateCommence": "2024-02-10",
+      "duree": "10 semaines", 
+      "horaire": "5 heures/semaine",
+      "lieu": "Présentielle",
+      "paye": true  
     }
   ]
 }

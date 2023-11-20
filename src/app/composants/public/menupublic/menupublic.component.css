@@ -10,14 +10,6 @@ img {
   height: 90px;
 }
 
-.back {
-  background-image: url('../../../../assets/back.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 60vh; /* Ajustez la hauteur selon vos besoins */
-}
-
 .navbar a {
   color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -47,4 +39,3 @@ img {
 .c1{
   color:crimson;
 }
-

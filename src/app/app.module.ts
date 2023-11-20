@@ -14,6 +14,9 @@ import { FormationComponent } from './composants/public/formation/formation.comp
 import { HomeComponent } from './composants/public/home/home.component';
 import { MenupublicComponent } from './composants/public/menupublic/menupublic.component';
 import { SelectedformationComponent } from './composants/public/selectedformation/selectedformation.component';
+import { FonctionnalitesComponent } from './composants/admin/fonctionnalites/fonctionnalites.component';
+import { InformationComponent } from './composants/admin/information/information.component';
+
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { SelectedformationComponent } from './composants/public/selectedformatio
     ErreurComponent,
     DashadminComponent,
     MenuadminComponent,
+    FonctionnalitesComponent,
     LoginComponent,
     CertaficatComponent,
     DashpublicComponent,
@@ -28,7 +32,8 @@ import { SelectedformationComponent } from './composants/public/selectedformatio
     FormationComponent,
     HomeComponent,
     MenupublicComponent,
-    SelectedformationComponent
+    SelectedformationComponent,
+    InformationComponent,
   ],
   imports: [
     BrowserModule,

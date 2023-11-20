@@ -1,11 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menupublic',
   templateUrl: './menupublic.component.html',
-  styleUrls: ['./menupublic.component.css']
+  styleUrls: ['./menupublic.component.css'],
 })
-export class MenupublicComponent  {
+export class MenupublicComponent {
+  constructor(private router: Router) {}
 
-
+  public LogIn() {
+    this.router.navigate(['extranet']);
+  }
 }
