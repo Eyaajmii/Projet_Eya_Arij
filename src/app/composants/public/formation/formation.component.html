@@ -1,18 +1,16 @@
-<h1>Les Formations Certifiées</h1>
-<ul class="list-group">
-  <li *ngFor="let f of  lesFormations" class="list-group-item">
-    <img width="100px" [src]="f.photo" alt="{{ f.nom }} Image" />
-    <span>Id: {{ f.id }}</span>
-    <span>{{ f.nom | uppercase }}</span>
-    <div class="d-flex justify-content-between">
-      <span>
-        <button [routerLink]="['/formation', f.id]" class="btn btn-info">Infos</button>
-      </span>
+<h1 class="text-center mt-4 mb-4" >Certified Training</h1>
+<div class="d-flex flex-wrap justify-content-center text-center">
+<div *ngFor="let f of lesFormations" class="card m-2" style="width: 35rem;">
+    <img class="card-img-top border-bottom border-secondary rounded-bottom " [src]="f.photo" alt="{{ f.nom }} Image" style="height: 150px; object-fit: cover;">
+    <div>
+      <h5 class="card-title font-weight-bold text-secondary">{{ f.nom | uppercase }}</h5>
+      <p class="card-text" [ngClass]="{'badge': true, 'rounded-pill': true, 'bg-danger text-light': f.paye, 'bg-success text-light': !f.paye}">
+        <i class="fa-solid fa-wallet" style="color: #ffffff;"></i> {{ f.paye ? 'Paid' : 'Free' }}
+      </p>
+      <br>
+      <a [routerLink]="['/formation', f.id]" class="btn btn-info info"><i class="fa-solid fa-circle-info" style="color: #fcfcfc;"></i></a>
     </div>
-  </li>
-</ul>
+  </div>
 
-
-
-
+</div>
 

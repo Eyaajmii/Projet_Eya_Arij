@@ -27,7 +27,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', title: 'Home', component: HomeComponent },
       { path: 'event', title: 'Event', component: EventComponent },
-      { path: 'certaficat', title: 'Nos Certificats', component: CertaficatComponent },
+      { path: 'certificat', title: 'Nos Certificats', component: CertaficatComponent },
       { path: 'formation', title: 'Formations', component: FormationComponent },
       { path: 'formation/:idf', title: 'Formations', component: SelectedformationComponent },
     ]},

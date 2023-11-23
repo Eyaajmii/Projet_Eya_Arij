@@ -24,6 +24,9 @@ export class FormationService {
     deleteProduit(id:number){
       return this.http.delete(url+"/"+ id);
     }
-      
+    rechercheFormation(query:any): Observable<Formation[]> {
+      const searchUrl = `${url}/search?query=${query}`;
+      return this.http.get<Formation[]>(searchUrl);
+    }
 }
 

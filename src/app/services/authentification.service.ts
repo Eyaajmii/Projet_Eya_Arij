@@ -4,12 +4,17 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthentificationService {
+  
   private adminstrateur = { username: 'admin', pwd: 'admin123' };
   private etudiant = { username: 'etudiant', pwd: 'etud456' };
   private auth = false;
 
   constructor() { }
-
+  public changePassword(newPassword: string): void {
+    if (this.auth) {
+      this.adminstrateur.pwd = newPassword;
+    }
+  }
   public login(username: string, pwd: string): boolean {
     if (username === this.etudiant.username && pwd === this.etudiant.pwd) {
       this.auth = true;
@@ -34,9 +39,5 @@ export class AuthentificationService {
     this.auth = false;
   }
 
-  public changePassword(newPassword: string): void {
-    if (this.auth) {
-      this.adminstrateur.pwd = newPassword;
-    }
-  }
+
 }

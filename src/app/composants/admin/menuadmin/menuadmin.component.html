@@ -1,16 +1,36 @@
+<!-- menuadmin.component.html -->
+
 <div class="navbar navbar-expand-lg bg-custom">
-    <div class="container">
-      <div>
-        <ul class="nav justify-content-end ">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/adminstrateur/information">About YOU</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/adminstrateur/fonction">fonctionnalité</a>
-          </li>
-        </ul>
-      </div>
-      
+  <div class="container">
+    <div>
+      <!-- Menu items -->
+      <ul class="nav justify-content-end ">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminstrateur/information">About YOU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/adminstrateur/fonction">fonctionnalité</a>
+        </li>
+        <li class="nav-item">
+          <!-- Input for search -->
+          <input class="form-control" [(ngModel)]="searchQuery" placeholder="Rechercher une activité">
+        </li>
+        <li class="nav-item">
+          <button (click)="searchFormation()">Rechercher</button>
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
 
+
+<div>
+<ul class="list-group">
+  <!-- List of search results -->
+  <li *ngFor="let f of lesFormations" class="list-group-item">
+    <img width="100px" [src]="f.photo" alt="{{ f.nom }} Image" />
+    <span>Id: {{ f.id }}</span>
+    <span>{{ f.nom | uppercase }}</span>
+  </li>
+</ul>
+</div>

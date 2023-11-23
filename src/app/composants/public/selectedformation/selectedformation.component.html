@@ -1,15 +1,27 @@
-<div class="card container max-width" style="max-width: 350px">
-    <div class="card-header text-center">{{ formation?.nom }}</div>
-    <div class="card-body">
-      <ul>
-        <li>Date d'ouverture : {{ formation?.dateCommence }}</li>
-        <li>Horaire : {{ formation?.horraire }}</li>
+<!--<img class="full-width-img" [src]="formation?.photo" alt="{{ formation?.nom }} Image">-->
+<h1 class="pageTitle">Training: {{ formation?.nom }}</h1>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="list-group">
+        
+        <li class="list-group-item"><strong>Date d'ouverture:</strong> {{ formation?.dateCommence | date }}</li>
+        <li class="list-group-item"><strong>Date fin Inscription:</strong> {{ formation?.datefinInscri | date }}</li>
+        <li class="list-group-item"><strong>Horaire:</strong> {{ formation?.horraire }}</li>
+        <li class="list-group-item"><strong>Durée:</strong> {{ formation?.duree }}</li>
+        <li class="list-group-item"><strong>Lieu:</strong> {{ formation?.lieu }}</li>
+        <li class="list-group-item"><strong>Contenu:</strong>
+          <ul>
+            <li *ngFor="let contenu of formation?.contenu">{{ contenu }}</li>
+          </ul>
+        </li>
       </ul>
     </div>
-    <div class="card-footer text-muted text-center">
-       <button routerLink="/formation" class="btn btn-primary">
+    <div class="col-md-6">
+      <!-- Ajoutez ici d'autres éléments Bootstrap ou personnalisez selon vos besoins -->
+      <button class="btn btn-primary" routerLink="/formation">
         <i class="fa-solid fa-upload" style="color: #f8f8f8;"></i> Retour
-       </button>
+      </button>
     </div>
+  </div>
 </div>
-

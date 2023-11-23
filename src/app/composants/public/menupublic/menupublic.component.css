@@ -1,26 +1,27 @@
 img {
-  width: 100px;
+  width: 80px;
 }
 
 .bg-custom {
-  background-color: rgba(36, 108, 167, 0.991);
+  background-color: rgba(44, 53, 59, 0.991);
 }
 .navbar{
   padding:10px;
   height: 90px;
+  
 }
 
 .navbar a {
   color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: larger;
 }
 
-/*.navbar a:focus {
-  color: red;
-  font-weight:bolder;
-}*/
+
 .navbar a:hover {
-  background-color: gold;
+  text-decoration-line:underline;
+  text-transform:uppercase;
+  text-decoration-color: lightblue;
 }
 .wow{
   width:400px;
@@ -35,7 +36,18 @@ img {
   font-family:Helvetica,Arial,sans-serif;
   padding-top: 200px;
   padding-left: 300px;
+  
 }
 .c1{
   color:crimson;
+}
+.p{
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: larger;
+  font-weight: bold;
+  padding-right: 20%;
+}
+.b{
+  padding-top: 15%;
 }
