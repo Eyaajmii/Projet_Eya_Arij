@@ -14,17 +14,18 @@ export class LoginComponent {
     const valid = this.authService.login(username, password);
 
     if (!valid) {
-      alert('Login ou mot de passe erronés');
-    }
-
-    /*if (this.authService.isEtudiant()) {
-      this.router.navigate(['/etud']); 
+      alert('Login or password incorrect');
       return;
-    }*/
+    }
 
     if (this.authService.isadminstrateur()) {
       this.router.navigate(['/adminstrateur']);
       return;
     }
+  }
+
+  public changePassword(newPassword: string): void {
+    this.authService.changePassword(newPassword);
+    alert('Password changed successfully');
   }
 }

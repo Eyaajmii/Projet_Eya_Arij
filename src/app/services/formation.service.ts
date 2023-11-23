@@ -23,7 +23,7 @@ export class FormationService {
     }
     deleteProduit(id:number){
       return this.http.delete(url+"/"+ id);
-      }
+    }
       
 }
 

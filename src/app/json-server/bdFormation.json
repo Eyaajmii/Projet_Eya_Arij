@@ -5,21 +5,14 @@
       "nom": "Cybersecurity Bootcamp",
       "photo": "assets/cyber.jpg",
       "contenu": [
-        {
-          "c1": "Attaques, menaces et risques",
-          "c2": "Architecture et design",
-          "c3": "Mise en œuvre de stratégies de sécurité",
-          "c4": "Les opérations et la gestion des incidents",
-          "c5": "Gouvernance, risque et conformité",
-          "c6": "CompTIA Security+ : Préparation à l'examen"
-        }
+        ""
       ],
       "datefinInscri": "2023-12-31",
       "dateCommence": "2024-02-01",
-      "duree": "20 semaines",  
+      "duree": "20 semaines",
       "horraire": "4 heures/semaine",
       "lieu": "En ligne",
-      "paye": true  
+      "paye": true
     },
     {
       "id": 2,
@@ -37,10 +30,10 @@
       ],
       "datefinInscri": "2023-12-31",
       "dateCommence": "2024-01-25",
-      "duree": "7 semaines", 
+      "duree": "7 semaines",
       "horraire": "2 heures/semaine",
       "lieu": "Présentielle",
-      "paye": false  
+      "paye": false
     },
     {
       "id": 3,
@@ -58,10 +51,10 @@
       ],
       "datefinInscri": "2023-12-31",
       "dateCommence": "2024-02-10",
-      "duree": "5 semaines",  
+      "duree": "5 semaines",
       "horaire": "8 heures/semaine",
       "lieu": "En ligne",
-      "paye": true  
+      "paye": true
     },
     {
       "id": 4,
@@ -79,10 +72,10 @@
       ],
       "datefinInscri": "2023-12-31",
       "dateCommence": "2024-02-10",
-      "duree": "10 semaines", 
+      "duree": "10 semaines",
       "horaire": "5 heures/semaine",
       "lieu": "Présentielle",
-      "paye": true  
+      "paye": true
     }
   ]
 }

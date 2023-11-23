@@ -14,7 +14,8 @@ import { adminGuard } from './guards/admin.guard';
 import { CertaficatComponent } from './composants/public/certaficat/certaficat.component';
 import { ConsultantComponent } from './composants/admin/consultant/consultant.component';
 import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.component';
-import { ModificationComponent } from './composants/admin/modification/modification.component';
+import { PassComponent } from './composants/admin/pass/pass.component';
+
 
 
 const routes: Routes = [
@@ -47,8 +48,8 @@ const routes: Routes = [
         children: [
           { path: 'consulter', title: 'consulter', component: ConsultantComponent },
           { path: 'ajouter', title: 'ajouter', component: AjoutantComponent },
-          { path: 'modifier', title: 'modifier', component: ModificationComponent },
-        ]
+          {path:'modifierPass',title:'modifierPass',component:PassComponent},
+             ]
       },
     ]},
       //erreur

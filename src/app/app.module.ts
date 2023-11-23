@@ -18,8 +18,8 @@ import { FonctionnalitesComponent } from './composants/admin/fonctionnalites/fon
 import { InformationComponent } from './composants/admin/information/information.component';
 import { ConsultantComponent } from './composants/admin/consultant/consultant.component';
 import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.component';
-import { ModificationComponent } from './composants/admin/modification/modification.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PassComponent } from './composants/admin/pass/pass.component';
 
 
 @NgModule({
@@ -40,7 +40,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     InformationComponent,
     ConsultantComponent,
     AjoutantComponent,
-    ModificationComponent,
+    PassComponent,
+   
     
   ],
   imports: [
