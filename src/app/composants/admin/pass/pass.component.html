@@ -1,4 +1,6 @@
-<h3>New Pass Word</h3>
-<label>Entrer ton mot de passe</label>
-<input type="text" #pass   placeholder="Password">
-<button (click)="changePass(pass.value)">Enregistrer</button>
+<h3>Nouveau Mot de Passe</h3>
+<form [formGroup]="updatePass" (ngSubmit)="resetPass()">
+  <label>Entrer ton mot de passe</label>
+  <input type="password" placeholder="Password" formControlName="password">
+  <button type="submit">Enregistrer</button>
+</form>

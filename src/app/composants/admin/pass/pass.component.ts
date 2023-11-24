@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { Password } from 'src/app/classes/password';
 import { AuthentificationService } from 'src/app/services/authentification.service';
 
 @Component({
@@ -9,14 +10,19 @@ import { AuthentificationService } from 'src/app/services/authentification.servi
 })
 export class PassComponent implements OnInit{
   updatePass!: FormGroup;
-  constructor(private authService: AuthentificationService,private fb:FormBuilder){}
+
+  constructor(private authService: AuthentificationService, private fb: FormBuilder) { }
+
   ngOnInit(): void {
-    this.updatePass=this.fb.nonNullable.group({
-      pass:[''],
-      username:['']
-    })
+    this.updatePass = this.fb.group({
+      password: [''],
+    });
   }
-  changePass(p:string){
-    this.authService.changePassword(p);
+
+  resetPass() {
+    const updatedPass: Password = this.updatePass.value;
+    this.authService.updatePassword(updatedPass.id, updatedPass).subscribe(() => {
+      console.log("Mot de passe mis à jour avec succès :", updatedPass);
+    });
   }
 }

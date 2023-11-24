@@ -1,10 +1,8 @@
-export class Password {
-  id :number;
-  pass: string;
+export interface Password {
+ 
+  id:number;
+  password: string;
   username: string;
-  constructor(id:number,pass:string,username:string){
-    this.id=id;
-    this.pass=pass;
-    this.username=username;
-  }
+ 
+  
 }

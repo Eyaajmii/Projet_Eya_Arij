@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthentificationService } from 'src/app/services/authentification.service';
 
@@ -8,24 +9,28 @@ import { AuthentificationService } from 'src/app/services/authentification.servi
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  constructor(private authService: AuthentificationService, private router: Router) {}
+  LoginForum!: FormGroup;
 
-  public connecter(username: string, password: string): void {
-    const valid = this.authService.login(username, password);
+  constructor(private authService: AuthentificationService, private router: Router, private fb: FormBuilder) {}
 
-    if (!valid) {
-      alert('Login or password incorrect');
-      return;
-    }
-
-    if (this.authService.isadminstrateur()) {
-      this.router.navigate(['/adminstrateur']);
-      return;
-    }
+  ngOnInit(): void {
+    this.LoginForum = this.fb.group({
+      username: [''],
+      password: ['']
+    });
   }
 
-  public changePassword(newPassword: string): void {
-    this.authService.changePassword(newPassword);
-    alert('Password changed successfully');
-  }
+
+  Connecter() {
+    const { username, password } = this.LoginForum.value;
+  
+    this.authService.getData(username, password).subscribe((response) => {
+        if (response.length > 0) {
+          this.router.navigate(['/adminstrateur']);
+        } else {
+          // Invalid credentials
+          alert('Invalid username or password');
+        }
+      })
+    }  
 }
