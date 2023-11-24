@@ -20,6 +20,10 @@ import { ConsultantComponent } from './composants/admin/consultant/consultant.co
 import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PassComponent } from './composants/admin/pass/pass.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MajusculePipe } from './pipes/majuscule.pipe';
+
 
 
 
@@ -43,6 +47,7 @@ import { PassComponent } from './composants/admin/pass/pass.component';
     ConsultantComponent,
     AjoutantComponent,
     PassComponent,
+    MajusculePipe,
 
 
    
@@ -53,7 +58,9 @@ import { PassComponent } from './composants/admin/pass/pass.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    FullCalendarModule,
+    BrowserAnimationsModule 
 
   ],
   providers: [],

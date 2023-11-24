@@ -4,12 +4,12 @@
   <div class="container">
     <div>
       <!-- Menu items -->
-      <ul class="nav justify-content-end ">
+      <ul class="nav justify-content-end">
         <li class="nav-item">
           <a class="nav-link" routerLink="/adminstrateur/information">About YOU</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/adminstrateur/fonction">fonctionnalité</a>
+          <a class="nav-link" routerLink="/adminstrateur/fonction">Fonctionnalité</a>
         </li>
         <li class="nav-item">
           <!-- Input for search -->
@@ -23,14 +23,13 @@
   </div>
 </div>
 
-
 <div>
-<ul class="list-group">
-  <!-- List of search results -->
-  <li *ngFor="let f of lesFormations" class="list-group-item">
-    <img width="100px" [src]="f.photo" alt="{{ f.nom }} Image" />
-    <span>Id: {{ f.id }}</span>
-    <span>{{ f.nom | uppercase }}</span>
-  </li>
-</ul>
+  <ul class="list-group">
+    <!-- List of search results -->
+    <li *ngFor="let f of lesFormations" class="list-group-item">
+      <img width="100px" [src]="f.photo" alt="{{ f.nom }} Image" />
+      <span>Id: {{ f.id }}</span>
+      <span>{{ f.nom | uppercase }}</span>
+    </li>
+  </ul>
 </div>

@@ -2,7 +2,7 @@
   "formation": [
     {
       "id": 1,
-      "nom": "Cybersecurity Bootcamp",
+      "nom": "cybersecurity bootcamp",
       "photo": "assets/cyber.jpg",
       "contenu": [
         "Attaques, menaces et risques",
@@ -21,7 +21,7 @@
     },
     {
       "id": 2,
-      "nom": "Soft skills",
+      "nom": "soft skills",
       "photo": "assets/soft.png",
       "contenu": [
         
@@ -42,7 +42,7 @@
     },
     {
       "id": 3,
-      "nom": "Python Bootcamp",
+      "nom": "python Bootcamp",
       "photo": "assets/python.jpg",
       "contenu": [
         
@@ -63,7 +63,7 @@
     },
     {
       "id": 4,
-      "nom": "Angular Bootstrap Fontawsome Bootcamp ",
+      "nom": "angular bootstrap fontawsome bootcamp ",
       "photo": "assets/angular.jpg",
       "contenu": [
        

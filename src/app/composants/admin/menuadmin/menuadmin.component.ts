@@ -9,17 +9,31 @@ import { FormationService } from 'src/app/services/formation.service';
 })
 export class MenuadminComponent {
   lesFormations: Formation[] = [];
-  searchQuery: any;
-  constructor(private formationService:FormationService ){}
+  searchQuery: string = '';
+
+  constructor(private formationService: FormationService) {}
+
   searchFormation(): void {
-    if (this.searchQuery.trim() !== '') {
-      this.formationService.rechercheFormation(this.searchQuery).subscribe(
-        data => this.lesFormations = data
-      );
+    if (this.isSearchQueryValid()) {
+      this.performSearch();
     } else {
-      this.formationService.getFormation().subscribe(
-        data => this.lesFormations = data
-      );
+      this.getAllFormations();
     }
+  }
+
+  private isSearchQueryValid(): boolean {
+    return this.searchQuery.trim()!== '';
+  }
+
+  private performSearch(): void {
+    this.formationService.rechercheFormation(this.searchQuery).subscribe(
+      data => this.lesFormations = data
+    );
+  }
+
+  private getAllFormations(): void {
+    this.formationService.getFormation().subscribe(
+      data => this.lesFormations = data
+    );
   }
 }

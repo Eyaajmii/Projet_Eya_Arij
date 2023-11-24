@@ -3,7 +3,7 @@
 <div *ngFor="let f of lesFormations" class="card m-2" style="width: 35rem;">
     <img class="card-img-top border-bottom border-secondary rounded-bottom " [src]="f.photo" alt="{{ f.nom }} Image" style="height: 150px; object-fit: cover;">
     <div>
-      <h5 class="card-title font-weight-bold text-secondary">{{ f.nom | uppercase }}</h5>
+      <h5 class="card-title font-weight-bold text-secondary">{{ f.nom |majuscule }}</h5>
       <p class="card-text" [ngClass]="{'badge': true, 'rounded-pill': true, 'bg-danger text-light': f.paye, 'bg-success text-light': !f.paye}">
         <i class="fa-solid fa-wallet" style="color: #ffffff;"></i> {{ f.paye ? 'Paid' : 'Free' }}
       </p>
