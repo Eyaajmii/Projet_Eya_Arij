@@ -23,6 +23,8 @@ import { PassComponent } from './composants/admin/pass/pass.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MajusculePipe } from './pipes/majuscule.pipe';
+import { InscriptionComponent } from './composants/abonne/inscription/inscription.component';
+
 
 
 
@@ -48,6 +50,8 @@ import { MajusculePipe } from './pipes/majuscule.pipe';
     AjoutantComponent,
     PassComponent,
     MajusculePipe,
+    InscriptionComponent,
+    
 
 
    

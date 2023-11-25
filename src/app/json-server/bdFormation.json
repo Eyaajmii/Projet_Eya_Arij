@@ -83,5 +83,33 @@
       "password": "admin123",
       "id": 1
     }
+  ],
+  "Abonnee": [
+    {
+      "id": 1,
+      "nom": "Hamraoui",
+      "prenom": "Arij",
+      "age": 20,
+      "sexe": "féminin",
+      "etat": "etudiant",
+      "formation": "Angular",
+      "lieu": "En ligne",
+      "email": "arij.hamraoui24@gmail.com",
+      "usernames": "rouja",
+      "password": "ArijHam11**"
+    },
+    {
+      "id": 2,
+      "nom": "Ajmi",
+      "prenom": "Eya",
+      "age": 20,
+      "sexe": "féminin",
+      "etat": "etudiant",
+      "formation": "Python",
+      "lieu": "Présentiel",
+      "email": "ajmieya13@gmail.com",
+      "usernames": "youyou",
+      "password": "Eya147*"
+    }
   ]
 }

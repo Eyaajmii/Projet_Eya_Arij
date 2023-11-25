@@ -15,6 +15,7 @@ import { CertaficatComponent } from './composants/public/certaficat/certaficat.c
 import { ConsultantComponent } from './composants/admin/consultant/consultant.component';
 import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.component';
 import { PassComponent } from './composants/admin/pass/pass.component';
+import { InscriptionComponent } from './composants/abonne/inscription/inscription.component';
 
 
 
@@ -52,6 +53,8 @@ const routes: Routes = [
              ]
       },
     ]},
+    //abonne
+    {path:'inscription',title:'inscription',component:InscriptionComponent},
       //erreur
   { path: '**', title: 'Error 404', component: ErreurComponent },
 ];

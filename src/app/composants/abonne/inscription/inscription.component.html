@@ -1,0 +1,132 @@
+<body class="bg-light">
+    <div class="container">
+        <form [formGroup]="inscriptionForm" (ngSubmit)="onSubmit()"  noValidate>
+            <div class="form-group" >
+                <h1 >
+                <i class="fa-solid fa-user-pen" style="color: #441f51;"></i> 
+                <label for="add">   Inscription  </label>
+            </h1>
+            </div>
+          <div class="form-group">
+            <h3>
+            <label for="nom"><i class="fas fa-user" style="color: #441f51;"></i> Nom : </label>
+            </h3>
+            <input type="text" class="form-control" id="nom" formControlName="nom">
+            <div *ngIf="nom?.errors?.['required'] && nom?.touched" class="alert alert-danger">
+              Le nom est un champs obligatoire
+              </div>
+              <div *ngIf= "isValidnom()" class="alert alert-danger">
+              Le nom a un format incorrect
+              </div>
+          </div>
+          <div class="form-group">
+            <h3>
+            <label for="prenom"><i class="fas fa-user" style="color: #441f51;"></i> Prénom : </label>
+            </h3>
+            <input type="text" class="form-control" id="prenom" formControlName="prenom">
+            <div *ngIf="prenom?.errors?.['required'] && prenom?.touched" class="alert alert-danger">
+              Le prenom est un champs obligatoire
+              </div>
+              <div *ngIf= "isValidprenom()" class="alert alert-danger">
+              Le prenom a un format incorrect
+              </div>
+          </div>
+          <div class="form-group">
+            <h3>
+            <label for="age"><i class="fa-solid fa-calendar-days" style="color: #441f51;"></i> Age : </label>
+            </h3>
+           <input type="number" class="form-control" id="age" formControlName="age">
+          </div>
+          <div class="form-group">
+            <h3>
+            <label><i class="fa-solid fa-children" style="color: #441f51;"></i> Sexe : </label>
+            </h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="feminin" formControlName="sexe" value="feminin">
+              <label class="form-check-label" for="etudiant"><i class="fa-solid fa-person-dress" style="color: #441f51;"></i> Féminin</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="masculin" formControlName="sexe" value="masculin">
+              <label class="form-check-label" for="enseignant"><i class="fa-solid fa-person" style="color: #441f51;"></i> Masculin</label>
+           </div>
+           </div>
+          <div class="form-group">
+            <h3>
+            <label for="etat">Etat : </label>
+            </h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="etudiant" formControlName="etat" value="etudiant">
+              <label class="form-check-label" for="etudiant"><i class="fa-solid fa-book-open-reader"></i> Etudiant</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="enseignant" formControlName="etat" value="enseignant">
+              <label class="form-check-label" for="enseignant"><i class="fa-solid fa-user-graduate"></i> Enseignant</label>
+           </div>
+          </div>
+          <div class="form-group">
+            <h3>
+            <label for="formation"><i class="fa-solid fa-code" style="color: #441f51;"></i> Choix de formation : </label>
+            </h3>
+            <select class="form-control" id="formation" formControlName="formation"> 
+                <option value="angular"><i class="fa-brands fa-angular" style="color: #441f51;"></i> Angular</option>
+                <option value="python"><i class="fa-brands fa-python" style="color: #441f51;"></i> Python</option>
+                <option value="cybersecurity"><i class="fa-solid fa-shield-halved" style="color: #441f51;"></i> Cyber Security</option>
+                <option value="softskills">Soft Skills</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <h3>
+                <label><i class="fa-solid fa-location-dot" style="color: #441f51;"></i> Choix de lieu : </label>
+            </h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="presentiel" formControlName="lieu" value="presentiel">
+              <label class="form-check-label" for="presentiel">Présentiel</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="enligne" formControlName="lieu" value="enligne">
+              <label class="form-check-label" for="enligne">En ligne</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <h3>
+            <label for="email"><i class="fa-solid fa-envelope" style="color: #441f51;"></i> Email : </label>
+            </h3>
+            
+            <input type="email" class="form-control" id="email" formControlName="email">
+            <div *ngIf="email?.errors?.['required'] && email?.touched" class="alert alert-danger">
+              L'email est un champs obligatoire
+              </div>
+              <div *ngIf= "isValidemail()" class="alert alert-danger">
+              L'email' a un format incorrect
+              </div>
+          </div>
+          <div class="form-group">
+            <h3>
+            <label for="username"><i class="fa-solid fa-circle-user"  style="color: #441f51;"></i> Username  :</label>
+            </h3>
+          
+            <input type="text" class="form-control" id="username" formControlName="username">
+            <div *ngIf="username?.errors?.['required'] && username?.touched" class="alert alert-danger">
+              Le username est un champs obligatoire
+              </div>
+              <div *ngIf= "isValidusername()" class="alert alert-danger">
+              Le username a un format incorrect
+              </div>
+          </div>
+          <div class="form-group">
+            <h3>
+            <label for="password"><i class="fa-solid fa-key" style="color: #441f51;"></i> Password : </label>
+            </h3>
+            <input type="password" class="form-control" id="password" formControlName="password">
+            <div *ngIf="password?.errors?.['required'] && password?.touched" class="alert alert-danger">
+              Le password est un champs obligatoire
+              </div>
+              <div *ngIf= "isValidpassword()" class="alert alert-danger">
+              Le password a un format incorrect
+              </div>
+
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="inscriptionForm.invalid">S'inscrire</button>
+        </form>
+      </div>
+</body>
