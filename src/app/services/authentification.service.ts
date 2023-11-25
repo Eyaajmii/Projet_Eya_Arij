@@ -15,9 +15,9 @@ getData(username: string,password: string): Observable<Password[]> {
 public isadminstrateur(): boolean {
   return this.auth=true;
 }
-updatePassword(id:number, p:Password):Observable<Password>{
-  return this.http.put<Password>(urlLogin+"/"+ id, p);
-  }
+updatePassword(id: number, oldUsername: string, newPassword: string): Observable<Password> {
+  return this.http.put<Password>(`${urlLogin}/${id}`, { username: oldUsername, password: newPassword });
+}
 
   /*public changePassword(newPassword: string): void {
     if (this.auth) {

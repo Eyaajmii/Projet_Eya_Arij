@@ -8,7 +8,7 @@ import { AuthentificationService } from 'src/app/services/authentification.servi
   templateUrl: './pass.component.html',
   styleUrls: ['./pass.component.css']
 })
-export class PassComponent implements OnInit{
+export class PassComponent implements OnInit {
   updatePass!: FormGroup;
 
   constructor(private authService: AuthentificationService, private fb: FormBuilder) { }
@@ -19,10 +19,21 @@ export class PassComponent implements OnInit{
     });
   }
 
+  get Passwords() {
+    return this.updatePass.get('password');
+  }
+
   resetPass() {
-    const updatedPass: Password = this.updatePass.value;
-    this.authService.updatePassword(updatedPass.id, updatedPass).subscribe(() => {
-      console.log("Mot de passe mis à jour avec succès :", updatedPass);
-    });
+    const pass: Password = {
+      id: 1,
+      username: 'admin',
+      password: this.Passwords?.value
+    };
+    
+    if (pass.password) {
+      this.authService.updatePassword(pass.id,pass.username ,pass.password).subscribe(() => {
+        alert('Password updated successfully');
+      });
+    }
   }
 }
