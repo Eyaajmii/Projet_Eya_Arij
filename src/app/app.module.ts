@@ -9,7 +9,7 @@ import { MenuadminComponent } from './composants/admin/menuadmin/menuadmin.compo
 import { LoginComponent } from './composants/login/login.component';
 import { CertaficatComponent } from './composants/public/certaficat/certaficat.component';
 import { DashpublicComponent } from './composants/public/dashpublic/dashpublic.component';
-import { EventComponent } from './composants/public/event/event.component';
+
 import { FormationComponent } from './composants/public/formation/formation.component';
 import { HomeComponent } from './composants/public/home/home.component';
 import { MenupublicComponent } from './composants/public/menupublic/menupublic.component';
@@ -24,6 +24,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MajusculePipe } from './pipes/majuscule.pipe';
 import { InscriptionComponent } from './composants/abonne/inscription/inscription.component';
+import { MembresComponent } from './composants/public/membres/membres.component';
 
 
 
@@ -40,7 +41,7 @@ import { InscriptionComponent } from './composants/abonne/inscription/inscriptio
     LoginComponent,
     CertaficatComponent,
     DashpublicComponent,
-    EventComponent,
+ 
     FormationComponent,
     HomeComponent,
     MenupublicComponent,
@@ -51,6 +52,7 @@ import { InscriptionComponent } from './composants/abonne/inscription/inscriptio
     PassComponent,
     MajusculePipe,
     InscriptionComponent,
+    MembresComponent,
     
 
 

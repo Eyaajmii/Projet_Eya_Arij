@@ -1,0 +1,36 @@
+full-calendar{
+    margin-left: 50px;
+    width: 20%;
+    height: 20%;
+    background-color:slategrey;
+}
+.para{
+    background-color:#DDFFC9;
+    width: 600px;
+    height: 300px;
+    margin-left: 160px;
+    filter: drop-shadow(0 0 0.90rem rgb(136, 136, 136)); 
+
+}
+p{
+    font-family: cursive;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+}
+.txt{
+    font-size: x-large;
+    color:darkgreen;
+    font-weight: bold;
+}
+.pic{
+    width: 600px;
+    height: 300px;
+    margin-left: 760px;
+    opacity: 0.7;
+    filter: drop-shadow(0 0 0.90rem rgb(136, 136, 136)); 
+}
+.pic:hover{
+    opacity: 1;
+    filter: drop-shadow(0 0 1rem rgb(196, 195, 195)); 
+}
