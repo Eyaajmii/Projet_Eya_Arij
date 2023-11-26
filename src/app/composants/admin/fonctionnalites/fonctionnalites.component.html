@@ -1,15 +1,22 @@
-<div class="container">
-  <h1>Mes Fonctionnalités</h1>
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/adminstrateur/fonction/consulter">Consulter les formations</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" routerLink="/adminstrateur/fonction/ajouter">Ajouter une formation</a>
-    </li>
-    <li>
-      <a class="nav-link" routerLink="/adminstrateur/fonction/modifierPass">Have A New Password?</a>
-    </li>
-  </ul>
+<div class="main">
+  <div class="up">
+    <button class="card1">
+      <a class="nav-link" routerLink="/adminstrateur/fonction/consulter"><i class="fa-solid fa-magnifying-glass" style="color: #000000;font-size: 25px;margin-left: -.1em;"></i></a>
+    </button>
+    <button class="card2">
+      <a class="nav-link" routerLink="/adminstrateur/fonction/ajouter"><i class="fa-solid fa-address-book" style="color: #000000;font-size: 25px;margin-left: -.9em;"></i></a>
+    </button>
+  </div>
+  <div class="down">
+    <button class="card3">
+      <a class="nav-link" routerLink="/adminstrateur/fonction/modifierPass"> <i class="fa-solid fa-cash-register" style="color: #000000;margin-left: -.1em;font-size: 30px;"></i></a>
+  </button>
+    <button class="card4">
+      <i class="fa-solid fa-trash discord" style="color: #000000;font-size: 25px;margin-left: -.9em;"></i>
+    </button>
+  </div>
+</div>
+<div class="b">
+  <!--Espace-->
 </div>
 <router-outlet></router-outlet>

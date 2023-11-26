@@ -1,73 +1,71 @@
-<ul class="list-group">
-    <li *ngFor="let f of  lesFormations" class="list-group-item">
-      <img width="100px" [src]="f.photo" alt="{{ f.nom }} Image" />
-      <span>Id: {{ f.id }}</span>
-      <span>{{ f.nom | uppercase }}</span>
-      <div class="d-flex justify-content-between">
-        <span>
-          <button [routerLink]="['/formation', f.id]" class="btn btn-info">Infos</button>
-        </span>
-        <span>
-          <button (click)="afficherFormulaireMiseAJour(f)">  Modifier</button>
-        </span>
-        <span>
-          <button  (click)="Supprimer(f.id)">Supprimer</button>
-        </span>
-      </div>
+<h1>List of training courses</h1>
+<ul>
+    <li *ngFor="let f of  lesFormations" >
+      <div class="card">
+        <div class="icons"> 
+           <button class="save" (click)="afficherFormulaireMiseAJour(f)">
+             <i class="fa-regular fa-floppy-disk save__icon" style="color: #ffffff;"></i>Modify</button>
+         </div>
+        <div class="card__info">
+          <span class="page">{{f.nom|uppercase}}</span>
+          <p>Date Fin Inscription : {{f.datefinInscri}}</p>
+          <p>Date De Commence : {{f.dateCommence}}</p>
+          <p>Duree : {{f.duree}}</p>  
+          <p>Payé : <input type="checkbox"   *ngIf="f.paye" checked /></p>
+        </div>
+        <button (click)="Supprimer(f.id)">Delete</button>
+     </div>
     </li>
   </ul>
+
   <!--Modification-->
   <div id="modif" class="c1" id="modifyDiv">
-    <div class="container">
-      <h1>Update the training</h1>
+    <div >
+      <p class="h">Update the training</p>
       <form [formGroup]="updateForm" (ngSubmit)="updateFormation()">
           <div>
-              <label> Identifiant du produit </label>
-              <input type="number" name="id" formControlName="id" >
+              <label>Name </label>
+              <input type="text" name="nom" formControlName="nom" class="input">
           </div>
           <div>
-              <label>Nom de la formation </label>
-              <input type="text" name="nom" formControlName="nom">
+              <label>Picture </label>
+              <input type="text" name="photo" formControlName="photo" placeholder="assets/...." class="input">
           </div>
-          <div>
-              <label>Photo de la formation </label>
-              <input type="text" name="photo" formControlName="photo" placeholder="assets/....">
-          </div>
-          <h5>Contenu</h5>
+          <h5>Content</h5>
           <div formArrayName="Contenu">
               <div *ngFor="let c of lescontenus.controls ; let i=index">
                   <div *ngIf="i<5">
-                  Contenu {{i+1}}
-                  <input type="text" [formControlName]="i">
+                    Content {{i+1}}
+                  <input type="text" [formControlName]="i" class="input">
                   </div>
               </div>
           </div>
-          <button type="button" (click)="ajoutcontenu()" class="btn btn-secondary">Ajouter Contenu</button><br>
+          <button type="button" (click)="ajoutcontenu()" class="input">Ajouter Contenu</button><br>
           <div>
               <label for="datefinInscri">Date fin inscription:</label>
-              <input type="text" id="datefinInscri" formControlName="datefinInscri">
+              <input type="text" id="datefinInscri" formControlName="datefinInscri" class="input">
           </div>
           <div>
               <label for="dateCommence">dateCommence : </label>
-              <input type="text" id="dateCommence" formControlName="dateCommence">
+              <input type="text" id="dateCommence" formControlName="dateCommence" class="input">
           </div>
           <div>
               <label>duree </label>
-              <input type="text" name="duree" formControlName="duree">
+              <input type="text" name="duree" formControlName="duree" class="input">
           </div>
           <div>
               <label>Horraire :  </label>
-              <input type="text" name="horraire" formControlName="horraire">
+              <input type="text" name="horraire" formControlName="horraire" class="input">
           </div>
           <div>
               <label>lieu  :  </label>
-              <input type="text" name="lieu" formControlName="lieu">
+              <input type="text" name="lieu" formControlName="lieu" class="input">
           </div>
           <div>
               <label for="paye">Payé:</label>
-              <input type="checkbox" id="paye" formControlName="paye">
+              <input type="checkbox" id="paye" formControlName="paye" >
           </div>
-          <input type="submit" value="Enregistrer "class="btn btn-success" id="btnenregistre" >
+          <input type="submit" value="Enregistrer" id="btnenregistre"  class="input">
       </form>
   </div>
   

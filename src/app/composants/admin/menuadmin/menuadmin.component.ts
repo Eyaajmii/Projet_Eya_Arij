@@ -16,8 +16,6 @@ export class MenuadminComponent {
   searchFormation(): void {
     if (this.isSearchQueryValid()) {
       this.performSearch();
-    } else {
-      this.getAllFormations();
     }
   }
 

@@ -1,9 +1,9 @@
-img {
-    width: 100px;
+
+  .c{
+    background-color: antiquewhite;
   }
-  
   .bg-custom {
-    background-color: rgba(36, 108, 167, 0.991);
+    background-color:#046169;
   }
   .navbar{
     padding:10px;
@@ -13,29 +13,80 @@ img {
   .navbar a {
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style:italic;
+    margin-top: 15px;
+    
   }
   
-  /*.navbar a:focus {
-    color: red;
-    font-weight:bolder;
-  }*/
   .navbar a:hover {
-    background-color: gold;
+    text-transform: uppercase;
+    font-family: cursive;
   }
-  .wow{
-    width:400px;
-    float: right;
-    margin-right: 300px;
-    padding-top: 40px;
+  .logo{
+    height: 300px;
+    width: 300px;
+    margin-top: -65px;
   }
-  .txt{
+  .input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin-top: 25px;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+  }
+  
+  .input:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
+  }
+  .btn {
+    margin-top: 17px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    font-family: inherit;
+    font-weight: 500;
     color: black;
-    font-size:320%;
-    font-weight: 1000;
-    font-family:Helvetica,Arial,sans-serif;
-    padding-top: 200px;
-    padding-left: 300px;
-  }
-  .c1{
-    color:crimson;
-  }
+    background-color: white;
+    margin-left: 20px;
+   }
+   
+   .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   }
+   
+   .btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+   }
+   
+   .btn::after {
+    background-color: #fff;
+   }
+   
+   .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+   }

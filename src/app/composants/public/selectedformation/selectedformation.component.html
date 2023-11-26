@@ -1,30 +1,26 @@
-<!--<img class="full-width-img" [src]="formation?.photo" alt="{{ formation?.nom }} Image">-->
-<h1 class="pageTitle">Training: {{ formation?.nom }}</h1>
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-md-6">
-      <ul class="list-group">
-        
-        <li class="list-group-item"><strong>Date d'ouverture:</strong> {{ formation?.dateCommence | date }}</li>
-        <li class="list-group-item"><strong>Date fin Inscription:</strong> {{ formation?.datefinInscri | date }}</li>
-        <li class="list-group-item"><strong>Horaire:</strong> {{ formation?.horraire }}</li>
-        <li class="list-group-item"><strong>Durée:</strong> {{ formation?.duree }}</li>
-        <li class="list-group-item"><strong>Lieu:</strong> {{ formation?.lieu }}</li>
-        <li class="list-group-item"><strong>Contenu:</strong>
-          <ul>
-            <li *ngFor="let contenu of formation?.contenu">{{ contenu }}</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      
-      <button class="btn btn-primary" routerLink="/formation">
-        <i class="fa-solid fa-upload" style="color: #f8f8f8;"></i> Retour
-      </button>
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/inscription">Inscription</a>
-      </li>
+<div class="card">
+  <div class="card__wrapper">
+      <div class="card__back"><a routerLink="/formation"><i class="fa-solid fa-backward" style="color: #000000;height: 24; width: 24;"></i></a></div>
+  </div>
+  <div><img [src]="formation?.photo"></div>
+  <div class="card__title">{{formation?.nom|uppercase}}</div>
+  <div class="card__subtitle">
+    <p>Start date : {{formation?.dateCommence}}</p>
+    <p>Registration end date: {{formation?.datefinInscri}}</p>
+    <p>Schedule : {{formation?.horraire}}</p>
+    <p>Lasted : {{formation?.duree}}</p>
+    <p>place:{{formation?.lieu}}</p>
+    <p>Contents : </p>
+    <ul>
+      <li *ngFor="let contenu of formation?.contenu">{{contenu}}</li>
+    </ul>
+</div>
+</div>
+<button style="margin-left: 650px;" routerLink="/inscription">
+  <div class="svg-wrapper-1">
+    <div class="svg-wrapper">
+      <i class="fa-solid fa-address-card" style="color: #ffffff;"></i>
     </div>
   </div>
-</div>
+  <span>Registration</span>
+</button>

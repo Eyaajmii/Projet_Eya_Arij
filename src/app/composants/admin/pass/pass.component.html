@@ -1,6 +1,12 @@
-<h3>Nouveau Mot de Passe</h3>
+
+<h1>A New Password</h1>
+<br>
+<div class="container">
 <form [formGroup]="updatePass" (ngSubmit)="resetPass()">
-  <label>Entrer ton mot de passe</label>
-  <input type="password" placeholder="Password" formControlName="password">
-  <button type="submit">Enregistrer</button>
+  <input class="input" type="password"  formControlName="password" placeholder="Enter your password">   
+  <button class="btn" type="submit">
+    <span class="btn-text-one">Validate</span>
+    <span class="btn-text-two">Great!</span>
+</button>
 </form>
+</div>

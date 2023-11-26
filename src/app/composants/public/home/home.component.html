@@ -1,15 +1,81 @@
 <div class="bodyB">
-<h1>Welcome to your Home <span>Polytech Mastery Club</span> </h1>
+<div>
+    <h2 class="title">
+      <span class="title-word title-word-1">Welcome</span>
+      <span class="title-word title-word-2">to</span>
+      <span class="title-word title-word-3">your</span>
+      <span class="title-word title-word-4">Home</span>
+    </h2>
+  </div>
+<br>
 <br>
 <div class="para">
     <p class="txt">
         About Us 
     </p>
-    <p>
+    <p class="t">
         The Polytech Mastery Club, established in 2020 in Tunisia, stands as a dynamic and forward-thinking community deeply entrenched in the ever-evolving realm of technology. Born out of a shared passion for innovation and a commitment to mastering the intricacies of cutting-edge tools, the club has become a beacon for technology enthusiasts and learners alike.    </p>
 </div>
 <div >
     <img src="assets/p1.jpeg" class="pic">
+</div>
+<br>
+<div>
+    <h1>Recent News</h1>
+    <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                       <h2 >About our training</h2>
+                       <p class="tt">"Our club proudly represents a dynamic partnership with </p>
+                        <p class="tt">leading training centers renowned for their  </p>
+                        <p class="tt">excellence in diverse levels and specialized</p>
+                        <p class="tt">fields of computer science, IT, and personal development."</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <h2 style="color:beige;margin-top: -10%;">Comming Soon</h2>
+                       <p class="tt" >web page création compétition for à company</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <h2>Our Club Anniversary </h2>
+                       <p class="tt">Our 3rd Club Anniversary on December 25th.</p> 
+                       <p class="tt">We are honored to meet you at The Golf Soukra</p>
+                       <p class="tt"> from 5:00 PM onwards</p>
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                       <h2>Member of the Month </h2>
+                       <img src="assets/member.png" style="border-radius: 50%;">
+                       <p class="tt">Ajmi Emna</p>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div>
 </div>
 <br>
 <full-calendar [options]="calendarOptions"></full-calendar>
