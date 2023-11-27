@@ -62,22 +62,12 @@ full-calendar{
  }
  #controls label:hover {
     opacity: 1;
- }
- #slide1:checked ~ #controls label:nth-child(2),
- #slide2:checked ~ #controls label:nth-child(3),
- #slide3:checked ~ #controls label:nth-child(4),
- #slide4:checked ~ #controls label:nth-child(1) {
+ }#slide1:checked ~ #controls label:nth-child(2),#slide2:checked ~ #controls label:nth-child(3),#slide3:checked ~ #controls label:nth-child(4),#slide4:checked ~ #controls label:nth-child(1) {
     background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
     float:right;
     margin: 0 -50px 0 0;
     display: block;
- }
- #slide1:checked ~ #controls label:nth-last-child(2),
- #slide2:checked ~ #controls label:nth-last-child(3),
- #slide3:checked ~ #controls label:nth-last-child(4),
- #slide4:checked ~ #controls label:nth-last-child(1) {
-    background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
-    float:left;
+ }#slide1:checked ~ #controls label:nth-last-child(2),#slide2:checked ~ #controls label:nth-last-child(3),#slide3:checked ~ #controls label:nth-last-child(4),#slide4:checked ~ #controls label:nth-last-child(1) { background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;  float:left;
     margin: 0 0 0 -50px;
     display: block;
  }
@@ -157,89 +147,10 @@ full-calendar{
   
   .title{
     text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 800;
-    font-size: 50px;
-    text-transform: uppercase;
-  }
-  /*Newtitle*/
-  h1{
-    color:deeppink;
-    text-align: center;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: 800;
-    font-size: 50px;
-    text-transform: uppercase;
-  }
-  /*API*/
-  .loader {
-   width: 20px;
-   height: 20px;
-   display: block;
-   margin: 20px auto;
-   box-sizing: border-box;
-   position: relative;
- }
- 
- .loader::after {
-   content: '';
-   width: 20px;
-   height: 20px;
-   float: left;    
-   position: absolute;
-   border-radius: 50% 50% 0;
-   border: 5px solid red;
-   transform: rotate(45deg) translate(0, 0);
-   box-sizing: border-box;
-   animation: animMarker 0.4s ease-in-out infinite alternate;
- }
- 
- .loader::before {
-   content: '';
-   box-sizing: border-box;
-   position: absolute;
-   left: 0;
-   right: 0;
-   margin: auto;
-   top: 150%;
-   width: 24px;
-   height: 4px;
-   border-radius: 50%;
-   background: rgba(0, 0, 0, 0.2);
-   animation: animShadow 0.4s ease-in-out infinite alternate;
- }
- 
- @keyframes animMarker {
-   0% {
-     transform: rotate(45deg) translate(5px, 5px);
-   }
- 
-   100% {
-     transform: rotate(45deg) translate(-5px, -5px);
-   }
- }
- 
- @keyframes animShadow {
-   0% {
-     transform: scale(0.5);
-   }
- 
-   100% {
-     transform: scale(1);
-   }
- }
- .poisition{
-   width: 300px;
-    height: 200px;
-    margin-right: 250px;
- }
- ul,li{
-   display: flex;
-   justify-content: space-between;
- }
- .card-text{
-   text-align:center;
-   background-color: #ccc;
-   border: 1px solid ;
-   filter: drop-shadow(0 0 0.90rem rgb(136, 136, 136)); 
+    font-family: "Montserrat", sans-serif;font-weight: 800;font-size: 50px;text-transform: uppercase;}
+  /*Newtitle*/h1{color:deeppink;text-align: center;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight: 800;font-size: 50px;text-transform: uppercase;}
+  /*API*/.loader {width: 20px;height: 20px;display: block;margin: 20px auto;box-sizing: border-box;position: relative;}.loader::after {content: '';width: 20px;height: 20px;float: left;position: absolute;border-radius: 50% 50% 0;border: 5px solid red;transform: rotate(45deg) translate(0, 0);box-sizing: border-box;animation: animMarker 0.4s ease-in-out infinite alternate;
+ }.loader::before { content: ''; box-sizing: border-box; position: absolute; left: 0; right: 0; margin: auto; top: 150%; width: 24px;height: 4px;border-radius: 50%;background: rgba(0, 0, 0, 0.2);animation: animShadow 0.4s ease-in-out infinite alternate;}@keyframes animMarker {0% {transform: rotate(45deg) translate(5px, 5px);}100% {transform: rotate(45deg) translate(-5px, -5px);}}@keyframes animShadow {0% {transform: scale(0.5);}100% {transform: scale(1);}}.poisition{ width: 300px;  height: 200px;  margin-right: 250px;
+ }ul,li{display: flex;justify-content: space-between;
+ }.card-text{ text-align:center; background-color: #ccc; border: 1px solid ; filter: drop-shadow(0 0 0.90rem rgb(136, 136, 136)); 
  }
