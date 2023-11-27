@@ -30,7 +30,7 @@ export class MenupublicComponent {
   }
 
   private performSearch(): void {
-    this.formationService.rechercheFormation(this.searchQuery).subscribe(
+    this.formationService.rechercherFormation(this.searchQuery).subscribe(
       data => this.lesFormations = data
     );
   }
