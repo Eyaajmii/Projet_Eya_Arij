@@ -19,11 +19,9 @@ export class MenupublicComponent {
 
  
   
-searchFormation(): void {
+  searchFormation(): void {
     if (this.isSearchQueryValid()) {
       this.performSearch();
-    }else{
-      this.getAllFormations();
     }
   }
 
@@ -32,7 +30,7 @@ searchFormation(): void {
   }
 
   private performSearch(): void {
-    this.formationService.rechercherFormation(this.searchQuery).subscribe(
+    this.formationService.rechercheFormation(this.searchQuery).subscribe(
       data => this.lesFormations = data
     );
   }
