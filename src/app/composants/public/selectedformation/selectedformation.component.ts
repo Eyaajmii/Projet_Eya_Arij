@@ -15,5 +15,5 @@ export class SelectedformationComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['idf'];
     this.formationService.getFormationById(id).subscribe((formation)=>(this.formation=formation));
   }
-
+  
 }

@@ -11,6 +11,7 @@ export class Formation {
     horraire: string;
     lieu: string;
     paye: boolean;
+    nblikes: number;
   
     constructor(
       id: number,
@@ -22,7 +23,8 @@ export class Formation {
       duree: string,
       horraire: string,
       lieu: string,
-      paye: boolean
+      paye: boolean,
+      nblikes: number
     ) {
       this.id = id;
       this.nom = nom;
@@ -34,5 +36,6 @@ export class Formation {
       this.horraire = horraire;
       this.lieu = lieu;
       this.paye = paye;
+      this.nblikes=nblikes;
     }
   }

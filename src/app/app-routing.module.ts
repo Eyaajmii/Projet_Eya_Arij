@@ -16,6 +16,7 @@ import { AjoutantComponent } from './composants/admin/ajoutant/ajoutant.componen
 import { PassComponent } from './composants/admin/pass/pass.component';
 import { InscriptionComponent } from './composants/abonne/inscription/inscription.component';
 import { MembresComponent } from './composants/public/membres/membres.component';
+import { ConsultAbonneComponent } from './composants/admin/consult-abonne/consult-abonne.component';
 
 
 
@@ -50,6 +51,7 @@ const routes: Routes = [
           { path: 'consulter', title: 'consulter', component: ConsultantComponent },
           { path: 'ajouter', title: 'ajouter', component: AjoutantComponent },
           {path:'modifierPass',title:'modifierPass',component:PassComponent},
+          {path:'consulterabonne',title:'consulterabonne',component:ConsultAbonneComponent}
              ]
       },
     ]},

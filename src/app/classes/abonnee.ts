@@ -8,7 +8,7 @@ export class Abonnee {
     formation: string;
     lieu: string;
     email: string;
-    username: string;
+    usernames: string;
     password: string;
   
     constructor(id:number,nom: string, prenom: string, age: number, sexe: string, etat: string, formation: string, lieu: string, email: string, username: string, password: string) {
@@ -21,7 +21,7 @@ export class Abonnee {
       this.formation = formation;
       this.lieu = lieu;
       this.email = email;
-      this.username = username;
+      this.usernames = username;
       this.password = password;
     }
   }

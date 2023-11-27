@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
+import { Formation } from 'src/app/classes/formation';
+import { FormationService } from 'src/app/services/formation.service';
 
 @Component({
   selector: 'app-menupublic',
@@ -7,31 +9,40 @@ import { Router } from '@angular/router';
   styleUrls: ['./menupublic.component.css'],
 })
 export class MenupublicComponent {
-  constructor(private router: Router) {}
+  lesFormations: Formation[] = [];
+  searchQuery: string = '';
+  constructor(private router: Router,private formationService: FormationService) {}
 
   public LogIn() {
     this.router.navigate(['extranet']);
   }
 
-  @HostListener('window:scroll', [])
-  onScroll(): void {
-    this.scrollFunction();
+ 
+  
+searchFormation(): void {
+    if (this.isSearchQueryValid()) {
+      this.performSearch();
+    }else{
+      this.getAllFormations();
+    }
   }
 
-  private scrollFunction(): void {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    
-    if (scrollPosition > 20) {
-      // Use Angular Renderer or ElementRef.nativeElement to access the DOM element
-      const navbar = document.getElementById("navbar");
-      if (navbar) {
-        navbar.style.top = "0";
-      }
-    } else {
-      const navbar = document.getElementById("navbar");
-      if (navbar) {
-        navbar.style.top = "-50px";
-      }
-    }
+  private isSearchQueryValid(): boolean {
+    return this.searchQuery.trim()!== '';
+  }
+
+  private performSearch(): void {
+    this.formationService.rechercherFormation(this.searchQuery).subscribe(
+      data => this.lesFormations = data
+    );
+  }
+
+  private getAllFormations(): void {
+    this.formationService.getFormation().subscribe(
+      data => this.lesFormations = data
+    );
+  }
+   go(){
+    this.router.navigate(['formation']);
   }
 }

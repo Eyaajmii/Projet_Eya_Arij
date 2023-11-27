@@ -17,4 +17,10 @@ export class FormationComponent implements OnInit {
       data => this.lesFormations = data
     );
   }
+  onModifier(f:Formation){
+    f.nblikes++;
+    this.formationService.updateFormationbyId(f.id, f).subscribe (
+    data => console.log(data)
+    )
+    }
 }

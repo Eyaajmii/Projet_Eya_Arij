@@ -12,4 +12,11 @@ export class AbonneService {
   enregistrerAbonne(ab: Abonnee): Observable<Abonnee> {
     return this.http.post<Abonnee>(url, ab);
   }
+  //fonctionnaliteAdmin
+  getAbonne(): Observable<Abonnee[]> {
+    return this.http.get<Abonnee[]>(url);
+  }
+  deleteAbonne(id:number){
+    return this.http.delete(url+"/"+ id);
+  }
 }

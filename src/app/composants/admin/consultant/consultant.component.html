@@ -8,10 +8,10 @@
          </div>
         <div class="card__info">
           <span class="page">{{f.nom|uppercase}}</span>
-          <p>Date Fin Inscription : {{f.datefinInscri}}</p>
-          <p>Date De Commence : {{f.dateCommence}}</p>
-          <p>Duree : {{f.duree}}</p>  
-          <p>Payé : <input type="checkbox"   *ngIf="f.paye" checked /></p>
+          <p>Registration End Date : {{f.datefinInscri}}</p>
+          <p>Start Date: {{f.dateCommence}}</p>
+          <p>Duration : {{f.duree}}</p>  
+          <p>Paid : <input type="checkbox"   *ngIf="f.paye" checked /></p>
         </div>
         <button (click)="Supprimer(f.id)">Delete</button>
      </div>
@@ -40,29 +40,29 @@
                   </div>
               </div>
           </div>
-          <button type="button" (click)="ajoutcontenu()" class="input">Ajouter Contenu</button><br>
+          <button type="button" (click)="ajoutcontenu()" class="input">Add Content        </button><br>
           <div>
-              <label for="datefinInscri">Date fin inscription:</label>
+              <label for="datefinInscri">Registration End Date:</label>
               <input type="text" id="datefinInscri" formControlName="datefinInscri" class="input">
           </div>
           <div>
-              <label for="dateCommence">dateCommence : </label>
+              <label for="dateCommence">Date Start : </label>
               <input type="text" id="dateCommence" formControlName="dateCommence" class="input">
           </div>
           <div>
-              <label>duree </label>
+              <label>duration </label>
               <input type="text" name="duree" formControlName="duree" class="input">
           </div>
           <div>
-              <label>Horraire :  </label>
+              <label>Schedules :  </label>
               <input type="text" name="horraire" formControlName="horraire" class="input">
           </div>
           <div>
-              <label>lieu  :  </label>
+              <label>Place :  </label>
               <input type="text" name="lieu" formControlName="lieu" class="input">
           </div>
           <div>
-              <label for="paye">Payé:</label>
+              <label for="paye">Paid:</label>
               <input type="checkbox" id="paye" formControlName="paye" >
           </div>
           <input type="submit" value="Enregistrer" id="btnenregistre"  class="input">

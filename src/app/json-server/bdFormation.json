@@ -17,7 +17,8 @@
       "duree": "20 semaines",
       "horraire": "4 heures/semaine",
       "lieu": "En ligne",
-      "paye": true
+      "paye": true,
+      "nblikes": 73
     },
     {
       "id": 2,
@@ -36,7 +37,8 @@
       "duree": "7 semaines",
       "horraire": "2 heures/semaine",
       "lieu": "Présentielle",
-      "paye": false
+      "paye": false,
+      "nblikes": 101
     },
     {
       "id": 3,
@@ -55,7 +57,8 @@
       "duree": "5 semaines",
       "horaire": "8 heures/semaine",
       "lieu": "En ligne",
-      "paye": true
+      "paye": true,
+      "nblikes": 120
     },
     {
       "id": 4,
@@ -74,7 +77,8 @@
       "duree": "10 semaines",
       "horaire": "5 heures/semaine",
       "lieu": "Présentielle",
-      "paye": true
+      "paye": true,
+      "nblikes": 85
     }
   ],
   "loginAdmin": [
@@ -88,28 +92,63 @@
     {
       "id": 1,
       "nom": "Hamraoui",
-      "prenom": "Arij",
-      "age": 20,
+      "prenom": "Hiba",
+      "age": 25,
       "sexe": "féminin",
       "etat": "etudiant",
-      "formation": "Angular",
+      "formation": "Soft Skills",
       "lieu": "En ligne",
+      "email": "Hamraouihiba@gmail.com",
+      "usernames": "hibaa",
+      "password": "HibaHam11**"
+    },
+    {
+      "id": 2,
+      "nom": "Ajmi",
+      "prenom": "Emna",
+      "age": 18,
+      "sexe": "féminin",
+      "etat": "etudiant",
+      "formation": "PHP",
+      "lieu": "Présentiel",
+      "email": "ajmiemna24@gmail.com",
+      "usernames": "mimi",
+      "password": "Emna147*"
+    },
+    {
+      "id": 3,
+      "nom": "Ajmi",
+      "prenom": "Med Anas",
+      "age": 28,
+      "sexe": "masculin",
+      "etat": "enseignant",
+      "formation": "cybersecurity bootcamp",
+      "lieu": "Présentiel",
+      "email": "anasajmii@gmail.com",
+      "usernames": "anaas",
+      "password": "AnasAjmi147*"
+    }
+  ],
+  "membres": [
+    {
+      "id": 1,
+      "nom": "Hamraoui",
+      "prenom": "Arij",
+      "age": 20,
+      "gender": "Female",
       "email": "arij.hamraoui24@gmail.com",
-      "usernames": "rouja",
-      "password": "ArijHam11**"
+      "role": "Front-end Developer",
+      "image": "assets/arij.jpg"
     },
     {
       "id": 2,
       "nom": "Ajmi",
       "prenom": "Eya",
       "age": 20,
-      "sexe": "féminin",
-      "etat": "etudiant",
-      "formation": "Python",
-      "lieu": "Présentiel",
+      "gender": "Female",
       "email": "ajmieya13@gmail.com",
-      "usernames": "youyou",
-      "password": "Eya147*"
+      "role": "Back-end Developer",
+      "image": "assets/eya.jpg"
     }
   ]
 }

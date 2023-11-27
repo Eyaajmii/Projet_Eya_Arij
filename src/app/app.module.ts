@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MajusculePipe } from './pipes/majuscule.pipe';
 import { InscriptionComponent } from './composants/abonne/inscription/inscription.component';
 import { MembresComponent } from './composants/public/membres/membres.component';
+import { ConsultAbonneComponent } from './composants/admin/consult-abonne/consult-abonne.component';
 
 
 
@@ -53,6 +54,7 @@ import { MembresComponent } from './composants/public/membres/membres.component'
     MajusculePipe,
     InscriptionComponent,
     MembresComponent,
+    ConsultAbonneComponent,
     
 
 

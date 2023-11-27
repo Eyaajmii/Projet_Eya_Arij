@@ -1,0 +1,18 @@
+<h1>View and Delete Subscriber </h1>
+<ul>
+    <li *ngFor="let f of  lesAbonne" >
+      <div class="card">
+        <div class="card__info">
+          <span class="page">{{f.nom|uppercase}} {{f.prenom|majuscule}}</span>
+          <p><span class="h">Username : </span> {{f.usernames}}</p>
+          <p><span class="h">Email:</span> {{f.email}}</p>
+          <p><span class="h">Age :</span> {{f.age}}</p>
+          <p><span class="h">State :</span> {{f.etat}}</p>  
+         <p><span class="h">Sex :</span> {{f.sexe}}</p>
+         <p><span class="h">Training :</span> {{f.formation}} </p>
+         <p><span class="h">Place of the Training :</span> {{f.lieu}}</p>
+        </div>
+        <button (click)="SupprimerAbonne(f.id)">Delete</button>
+     </div>
+    </li>
+  </ul>

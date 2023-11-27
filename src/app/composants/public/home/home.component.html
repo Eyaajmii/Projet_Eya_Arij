@@ -78,5 +78,29 @@
      </div>
 </div>
 <br>
+<ul>
+   <li>
 <full-calendar [options]="calendarOptions"></full-calendar>
+   </li>
+   <li>
+<!--Weather&&Position-->
+<div class="container mt-4 poisition" *ngIf="weatherData">
+   <h2 style="color: red;">{{ weatherData.name }}
+   <span style="float: left;"><div class="loader"></div></span>
+   </h2>
+   <div >
+     <div class="card-text">
+       <p >
+         <strong>Temperature:</strong>
+         {{ convertToCelsius(weatherData.main.temp) | number: '1.1' }}°C
+       </p>
+       <p>
+         <strong>Weather:</strong> {{ weatherData.weather[0].description }}
+         <span><img *ngIf="weatherData.weather[0].icon" [src]="getWeatherIconCode()" alt="Weather Icon" style="width: 35px;height: 35px;position: absolute;"/> </span>
+       </p>
+       </div>
+   </div>
+ </div>
+   </li>
+</ul>
 </div>

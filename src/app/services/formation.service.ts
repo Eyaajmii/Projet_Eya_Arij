@@ -28,5 +28,9 @@ export class FormationService {
       const searchUrl = `${url}/?nom=${nom}`;
       return this.http.get<Formation[]>(searchUrl);
     }
+    rechercherFormation(lieu: string): Observable<Formation[]> {
+      const searchUrl = `${url}/?lieu=${lieu}`;
+      return this.http.get<Formation[]>(searchUrl);
+    }
 }
 
